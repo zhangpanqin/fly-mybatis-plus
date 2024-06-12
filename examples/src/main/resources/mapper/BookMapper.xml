@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mflyyou.json.BookMapper">
+    <resultMap id="BookDomainId" type="com.mflyyou.json.BookDomain">
+        <result column="data_json" jdbcType="VARCHAR" javaType="List" property="dataJson" typeHandler="com.baomidou.mybatisplus.extension.handlers.Fastjson2TypeHandler"/>
+    </resultMap>
+
+    <select id="selectAll" resultMap="BookDomainId">
+        select * from book
+    </select>
+    <select id="selectAll1" resultType="com.mflyyou.json.BookDomain1">
+        select * from book
+    </select>
+    <select id="selectAll2" resultType="com.mflyyou.json.BookDomain2">
+        select * from book
+    </select>
+    <select id="selectAll3" resultType="com.mflyyou.json.BookDomain3">
+        select * from book
+    </select>
+</mapper>
